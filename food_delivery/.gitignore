@@ -1,52 +1,311 @@
-@'
-# Python
-.venv/
-venv/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
 
-# Secrets
+# ============================================================
+# TOKYO SUSHI / FOOD DELIVERY
+# Flutter + Python FastAPI + Telegram Bot + SQLite
+# ============================================================
+
+
+# ============================================================
+# SECRETS / CREDENTIALS
+# ============================================================
+
 .env
 .env.*
 !.env.example
+
+*.secret
+*.secrets
+secrets/
+private/
+
 *.pem
 *.key
+*.p12
+*.pfx
+*.jks
+*.keystore
 
-# Databases
+key.properties
+google-services.json
+GoogleService-Info.plist
+
+credentials.json
+service-account.json
+service_account.json
+
+*token*.txt
+*secret*.txt
+
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+ENV/
+
+.python-version
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+dist/
+wheels/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+coverage.xml
+htmlcov/
+
+.pyre/
+.pytype/
+.dmypy.json
+.pyre_configuration.local
+
+
+# ============================================================
+# PYTHON DATABASE / SQLITE
+# ============================================================
+
 *.db
 *.db-journal
+*.db-shm
+*.db-wal
+
 *.sqlite
 *.sqlite3
+*.sqlite-journal
+*.sqlite3-journal
 
-# Uploaded images
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3-shm
+*.sqlite3-wal
+
+*.db-backup
+*.backup
+
+
+# ============================================================
+# FOOD DELIVERY ADMIN
+# ============================================================
+
 food_delivery_admin/uploads/
+food_delivery_admin/media/
+food_delivery_admin/storage/
+food_delivery_admin/backups/
 
-# Flutter / Dart
+food_delivery_admin/.env
+food_delivery_admin/.venv/
+
+food_delivery_admin/*.db
+food_delivery_admin/*.sqlite3
+
+food_delivery_admin/logs/
+food_delivery_admin/tmp/
+food_delivery_admin/temp/
+
+
+# ============================================================
+# FLUTTER / DART
+# ============================================================
+
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
 .pub-cache/
 .pub/
+.flutter_tool_state
+
 build/
 coverage/
 
-# Android
+*.freezed.dart
+*.g.dart
+
+# Lockfile is intentionally kept for reproducible app builds.
+
+
+# ============================================================
+# ANDROID
+# ============================================================
+
+.gradle/
+.cxx/
+captures/
+
+android/local.properties
+android/key.properties
+
+**/android/.gradle/
+**/android/.cxx/
+**/android/captures/
+
+*.apk
+*.aab
+*.apks
+*.hprof
+
 *.jks
 *.keystore
-key.properties
-local.properties
+*.der
 
-# IDE
+# Signing configuration
+upload-keystore.jks
+release-key.jks
+
+
+# ============================================================
+# IOS / MACOS
+# ============================================================
+
+Pods/
+.symlinks/
+
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+
+**/macos/Flutter/ephemeral/
+
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+*.mobileprovision
+*.cer
+*.p8
+
+
+# ============================================================
+# WINDOWS / LINUX
+# ============================================================
+
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+*.exe
+*.dll
+*.so
+*.dylib
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+
+# ============================================================
+# IDE / EDITORS
+# ============================================================
+
 .idea/
 .vscode/
+
 *.iml
+*.ipr
+*.iws
 
-# System
-.DS_Store
-Thumbs.db
+*.code-workspace
+.project
+.classpath
+.settings/
 
-# Logs
+*.swp
+*.swo
+*~
+.vs/
+
+
+# ============================================================
+# LOGS / CACHE / TEMP
+# ============================================================
+
 *.log
+logs/
+
+tmp/
+temp/
+.cache/
+.cache-loader/
+
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+
+*.pid
+*.seed
+
+
+# ============================================================
+# OS FILES
+# ============================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+
+$RECYCLE.BIN/
+*.lnk
+
+
+# ============================================================
+# NGROK / LOCAL TUNNELS
+# ============================================================
+
+ngrok.yml
+ngrok.yaml
+.ngrok2/
+.ngrok/
+
+cloudflared.yml
+cloudflared.yaml
+
+
+# ============================================================
+# USER DATA / LOCAL EXPORTS
+# ============================================================
+
+user_data/
+sessions/
+session_data/
+exports/
+backups/
+
+*.session
+*.session-journal
+
+
+# ============================================================
+# KEEP PROJECT SOURCE FILES
+# ============================================================
+
+# Keep Flutter dependencies and project configuration.
+!pubspec.yaml
+!pubspec.lock
+
+# Keep source code and static assets.
+!*.dart
+!*.py
+!*.html
+!*.css
+!*.js
+!*.json
+
+# Keep documentation.
+!README.md
+!LICENSE
